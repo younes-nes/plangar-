@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎭PLANGAR🎭</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎭PLANGAR🎭</h1>
+    <nav>
+        <button class="btn" id="darkModeBtn">🌙 Mode sombre</button>
+        <button class="btn" id="profileBtn">⚙️ Profil</button>
+        <button class="btn" id="addVideoBtn">➕ Vidéo</button>
+    </nav>
+</header>
+
+<!-- Menu ajout vidéo -->
+<div id="add-video-menu" class="menu hidden">
+    <h2>Ajouter une vidéo</h2>
+    <input type="text" id="videoUrl" placeholder="Lien YouTube">
+    <input type="text" id="videoDesc" placeholder="Description">
+    <input type="file" id="videoFile" accept="video/*">
+    <button id="addVideoConfirm">Ajouter</button>
+</div>
+
+<!-- Menu profil -->
+<div id="profile-menu" class="menu hidden">
+    <h2>Profil</h2>
+    <img id="avatar" src="avatar-default.png">
+    <input type="file" id="avatarUpload">
+    <input type="text" id="username" placeholder="Nom d’utilisateur">
+    <button id="saveAvatarBtn">💾 Avatar</button>
+    <button id="saveUsernameBtn">💾 Nom</button>
+</div>
+
+<!-- Mini-jeu -->
+<section id="game">
+    <h2>🎮 Mini-jeu : Attrape les balles !</h2>
+    <canvas id="gameCanvas" width="600" height="300"></canvas>
+    <p>Score : <span id="gameScore">0</span></p>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

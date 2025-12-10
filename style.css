@@ -1,0 +1,105 @@
+/* --- ARRIÈRE-PLAN ET GÉNÉRAL --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(-45deg, #ff9a9f, #f9d0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    transition: 0.3s;
+}
+
+body.dark-mode {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #121212);
+    color: #fff;
+}
+
+@keyframes gradientBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* --- HEADER --- */
+header {
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: rgba(255,255,255,0.8);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+body.dark-mode nav button {
+    background: #333;
+    color: #fff;
+}
+
+/* --- MENUS --- */
+.menu {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 270px;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+body.dark-mode .menu {
+    background: rgba(20,20,20,0.9);
+    color: #fff;
+}
+
+.menu input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+body.dark-mode .menu input {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+#avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* --- MINI-JEU --- */
+#game {
+    text-align: center;
+    margin: 40px auto;
+}
+
+#gameCanvas {
+    background: rgba(255,255,255,0.1);
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+body.dark-mode #gameCanvas {
+    background: rgba(0,0,0,0.3);
+    border-color: #fff;
+}
